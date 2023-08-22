@@ -1,113 +1,141 @@
+'use client'
+
+import blkLogo from '@/assets/logo-header.svg'
+import manWelding from '@/assets/image-2.png'
+import item1 from '@/assets/service-1.png'
+import item2 from '@/assets/service-2.png'
+import item3 from '@/assets/service-3.png'
+import item4 from '@/assets/service-4.png'
+import item5 from '@/assets/service-5.png'
+
 import Image from 'next/image'
+import { InstagramLogo, LinkedinLogo, WhatsappLogo } from 'phosphor-react'
+import { ServicesCard } from '@/components/ServicesCard'
+
+// const item1 = '/src/assets/service-1.png'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <div>
+      <main className="flex flex-col items-center">
+        {/* HEADER */}
+        <div className="flex sticky top-0 items-center px-36 justify-between w-full h-[4.375rem] bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient">
+          <div className="mt-[75px]">
+            <a href="">
+              <Image src={blkLogo} alt="BLK Home" />
+            </a>
+          </div>
+          <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end">
+            <a href="" className=" hover:text-blue-200">
+              Home
+            </a>
+            <a href="" className=" hover:text-blue-200">
+              Quem Somos
+            </a>
+            <a href="" className=" hover:text-blue-200">
+              Serviços
+            </a>
+            <a href="" className=" hover:text-blue-200">
+              Contatos
+            </a>
+          </div>
+        </div>
+        {/* PRESENTATION */}
+        <div className="bg-presentation-image flex flex-col w-auto h-698 items-center justify-center opacity-95 bg-transparent">
+          <p className="w-presentation h-presentation text-4xl text-center text-gray-50">
+            A BLK é a escolha certa para quem procura serviços de fabricação de
+            peças de alta qualidade.
+          </p>
+        </div>
+
+        {/* QUEM SOMOS */}
+        <div className="grid grid-cols-2 py-4 px-32 gap-4">
+          <div className="w-96 h-80">
+            <h1 className="mt-12 text-4xl underline underline-offset-8 mb-14 decoration-green-450">
+              Quem Somos
+            </h1>
+            <p className="text-xl">
+              A BLK é especializada em fabricação de peças com alta precisão em
+              diversos tipos de materiais, incluindo metais ferrosos, não
+              ferrosos e polímeros. A empresa, apesar de nova, possui uma equipe
+              com anos de experiência no mercado e tem se destacado pela sua
+              excelência no atendimento aos seus clientes e pela qualidade de
+              seus produtos. Nossa equipe altamente qualificada garante a
+              realização de projetos com agilidade e precisão, atendendo a todas
+              as necessidades de seus clientes.
+            </p>
+          </div>
+
+          <Image src={manWelding} alt="" className="rounded" />
+        </div>
+
+        <div className="flex flex-col items-center w-full h-services bg-gray-300">
+          <h1 className="mt-12 text-4xl underline underline-offset-8 mb-14 decoration-green-450">
+            Serviços
+          </h1>
+
+          {/* SERVICOS */}
+          <div className="grid grid-cols-3 px-48 gap-32">
+            {/* CARD */}
+            <ServicesCard
+              icon={item1}
+              title="Fabricação por Usinagem"
+              description="Remoção de material com alta precisão para atingir a forma e medida
+          solicitada."
+              materials="Aço 1020 / 1045 / 1070 / 1080 / 4140 / 4340 / 8620, VC-150, VC-131,
+          Bronze TM-23 / TM-620, Latão, Cobre, Inox 304L / 316L, Poliacetal,
+          Polipropileno, Polietileno, Poliuretano, UHMW, Nylon, PVC, PEEK, PVDF,
+          Celeron, Fenolite, etc."
             />
+            <ServicesCard
+              icon={item2}
+              title="Fabricação em Chaparia"
+              description="Corte de chapas no plasma ou laser, vira de chapas e soldagem para atingir a forma e medida solicitada."
+              materials="SAE 1020, Inox 304L, Cobre, Bronze, etc"
+            />
+            <ServicesCard
+              icon={item3}
+              title="Fabricação de Molas"
+              description="Torção e vira em arames ou chapas para atingir a forma e medida solicitada."
+              materials="SAE 1080 – DIN 17223 C, SAE 1070 – DIN 17223 B, SAE 5160 / 6150 / 9254, AISI – 302 / 304 / 316 / 316 L / 410 / 420, INCONEL, MONEL, HASTELOY, BRONZE, etc."
+            />
+          </div>
+
+          <div className="grid grid-cols-2 mt-16 px-48 gap-32">
+            {/* CARD */}
+            <ServicesCard
+              icon={item4}
+              title="Venda de Materiais de Fixação e Auxiliares"
+              description="Produtos que auxiliam em montagem e fixações, seja para transporte de cargas ou sutentação."
+            />
+            <ServicesCard
+              icon={item5}
+              title="Desenho Técnico"
+              description="Aferição de medidas e projeção de vistas 2D e 3D para auxílio de produção de peças."
+            />
+          </div>
+        </div>
+      </main>
+
+      {/* RODAPE */}
+      <div className="flex items-center h-32 px-36 justify-between bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient">
+        <div className="mt-[75px]">
+          <a href="">
+            <Image src={blkLogo} alt="BLK Home" />
+          </a>
+        </div>
+        <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end">
+          <a href="" className=" hover:text-blue-200">
+            <WhatsappLogo size={56} />
+          </a>
+          <a href="" className=" hover:text-blue-200">
+            <InstagramLogo size={56} />
+          </a>
+          <a href="" className=" hover:text-blue-200">
+            <LinkedinLogo size={56} />
           </a>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   )
 }
