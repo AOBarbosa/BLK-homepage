@@ -1,6 +1,10 @@
 'use client'
 
-import blkLogo from '@/assets/logo-header.svg'
+import { ServicesCard } from '@/components/ServicesCard'
+
+import Image from 'next/image'
+import blkPresentation from '@/assets/Hero.png'
+import blkLogo from '@/assets/logo-bottom.svg'
 import manWelding from '@/assets/image-2.png'
 import item1 from '@/assets/service-1.png'
 import item2 from '@/assets/service-2.png'
@@ -8,45 +12,44 @@ import item3 from '@/assets/service-3.png'
 import item4 from '@/assets/service-4.png'
 import item5 from '@/assets/service-5.png'
 
-import Image from 'next/image'
-import { InstagramLogo, LinkedinLogo, WhatsappLogo } from 'phosphor-react'
-import { ServicesCard } from '@/components/ServicesCard'
-
-// const item1 = '/src/assets/service-1.png'
+import {
+  EnvelopeSimple,
+  InstagramLogo,
+  LinkedinLogo,
+  Phone,
+  WhatsappLogo,
+} from 'phosphor-react'
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-auto sm:w-mobile md:w-1440">
+      {/* HEADER */}
+      <div className="flex items-center px-4 md:px-36 justify-center md:justify-between w-auto sm:w-1440 h-70 bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient sticky left-0 top-0 right-0 z-20">
+        <div className="sm:mb-24">
+          <a href="">
+            <Image src={blkLogo} alt="BLK Home" className="w-60" />
+          </a>
+        </div>
+
+        <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end invisible md:visible">
+          <a href="" className=" hover:text-blue-200">
+            Home
+          </a>
+          <a href="" className=" hover:text-blue-200">
+            Quem Somos
+          </a>
+          <a href="" className=" hover:text-blue-200">
+            Serviços
+          </a>
+          <a href="" className=" hover:text-blue-200">
+            Contatos
+          </a>
+        </div>
+      </div>
+
       <main className="flex flex-col items-center">
-        {/* HEADER */}
-        <div className="flex sticky top-0 items-center px-36 justify-between w-full h-[4.375rem] bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient">
-          <div className="mt-[75px]">
-            <a href="">
-              <Image src={blkLogo} alt="BLK Home" />
-            </a>
-          </div>
-          <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end">
-            <a href="" className=" hover:text-blue-200">
-              Home
-            </a>
-            <a href="" className=" hover:text-blue-200">
-              Quem Somos
-            </a>
-            <a href="" className=" hover:text-blue-200">
-              Serviços
-            </a>
-            <a href="" className=" hover:text-blue-200">
-              Contatos
-            </a>
-          </div>
-        </div>
         {/* PRESENTATION */}
-        <div className="bg-presentation-image flex flex-col w-auto h-698 items-center justify-center opacity-95 bg-transparent">
-          <p className="w-presentation h-presentation text-4xl text-center text-gray-50">
-            A BLK é a escolha certa para quem procura serviços de fabricação de
-            peças de alta qualidade.
-          </p>
-        </div>
+        <Image src={blkPresentation} alt="" />
 
         {/* QUEM SOMOS */}
         <div className="grid grid-cols-2 py-4 px-32 gap-4">
@@ -69,14 +72,13 @@ export default function Home() {
           <Image src={manWelding} alt="" className="rounded" />
         </div>
 
+        {/* SERVICOS */}
         <div className="flex flex-col items-center w-full h-services bg-gray-300">
           <h1 className="mt-12 text-4xl underline underline-offset-8 mb-14 decoration-green-450">
             Serviços
           </h1>
 
-          {/* SERVICOS */}
           <div className="grid grid-cols-3 px-48 gap-32">
-            {/* CARD */}
             <ServicesCard
               icon={item1}
               title="Fabricação por Usinagem"
@@ -102,7 +104,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 mt-16 px-48 gap-32">
-            {/* CARD */}
             <ServicesCard
               icon={item4}
               title="Venda de Materiais de Fixação e Auxiliares"
@@ -115,11 +116,114 @@ export default function Home() {
             />
           </div>
         </div>
+
+        {/* CONTATOS */}
+        <div className="w-full h-contatos flex flex-col items-center bg-contato bg-no-repeat">
+          <h1 className="mt-12 text-4xl text-gray-50 underline underline-offset-8 mb-14 decoration-green-450">
+            Contatos
+          </h1>
+
+          <div className="grid grid-cols-2 gap-contatos px-48">
+            {/* FORMULARIO */}
+            <div className="w-card h-info flex flex-col px-2 gap-4 bg-gradient-to-b from-green-350 rounded">
+              <h1 className="text-center font-sans text-lg">
+                Mais Informações
+              </h1>
+
+              <p className="text-base">
+                Para qualquer informação, dúvida ou comentário, por favor ligue
+                ou mande uma mensagem via whatsapp para o número: (84) 9
+                9908-9824. Ou preencha o fomulário:
+              </p>
+
+              <form className="flex flex-col gap-2">
+                <label className="flex flex-col gap-2">
+                  <span className="text-start font-sans italic text-base">
+                    Nome
+                  </span>
+                  <textarea
+                    placeholder="Insira seu nome"
+                    className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
+                  />
+                </label>
+
+                <label className="flex flex-col gap-2">
+                  <span className="text-start font-sans italic text-base">
+                    Sobrenome
+                  </span>
+                  <textarea
+                    placeholder="Insira seu sobrenome"
+                    className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
+                  />
+                </label>
+
+                <label className="flex flex-col gap-2">
+                  <span className="text-start font-sans italic text-base">
+                    E-mail
+                  </span>
+                  <input
+                    type="email"
+                    placeholder="Insira seu e-mail"
+                    className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 peer focus:outline-none focus:border-sky-500"
+                  />
+                </label>
+
+                <label className="flex flex-col gap-2">
+                  <span className="text-start font-sans italic text-base">
+                    Telefone
+                  </span>
+                  <textarea
+                    placeholder="Insira seu telefone"
+                    className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
+                  />
+                </label>
+
+                <label className="flex flex-col gap-2">
+                  <span className="text-start font-sans italic text-base">
+                    Deixe-nos uma mensagem
+                  </span>
+                  <textarea
+                    placeholder="Insira uma mensagem"
+                    className="block resize-none w-full h-44 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
+                  />
+                </label>
+
+                <button
+                  type="submit"
+                  className="bg-green-info w-32 self-center rounded hover:bg-gray-400 hover:text-gray-100"
+                >
+                  Enviar
+                </button>
+              </form>
+            </div>
+
+            {/* INFO CONTATO */}
+            <div className="w-72 h-36 flex flex-col bg-gradient-to-b from-green-350 rounded gap-4">
+              <h1 className="text-center text-xl">Informações para contato</h1>
+              <div className="flex flex-col gap-2">
+                <p className="flex gap-2">
+                  <EnvelopeSimple size={24} />
+                  blkservicosecomercio@gmail.com
+                </p>
+
+                <p className="flex gap-2">
+                  <Phone size={24} />
+                  (84) 9 9908-9824
+                </p>
+
+                <a className="flex gap-2 cursor-pointer underline decoration-transparent hover:text-gray-100 hover:underline-offset-4 hover:decoration-white">
+                  <WhatsappLogo size={24} />
+                  (84) 9 9908-9824
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       {/* RODAPE */}
-      <div className="flex items-center h-32 px-36 justify-between bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient">
-        <div className="mt-[75px]">
+      <div className="flex items-center w-full h-32 px-36 justify-between bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient">
+        <div className="self-end">
           <a href="">
             <Image src={blkLogo} alt="BLK Home" />
           </a>

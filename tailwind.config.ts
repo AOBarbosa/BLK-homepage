@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       width: {
         '1440': '90rem',
+        mobile: '40rem',
         'home-text': '2.125rem',
         card: '16.875rem',
         presentation: '37.5625rem',
@@ -21,6 +22,12 @@ const config: Config = {
         services: '68.5rem',
         card: '26.59044rem',
         presentation: '7.8125rem',
+        contatos: '60.63425rem',
+        info: '45rem',
+      },
+
+      gap: {
+        contatos: '30rem',
       },
 
       margin: {
@@ -48,6 +55,8 @@ const config: Config = {
 
         green: {
           450: '#5B9599',
+          350: '#B9B9B9',
+          info: '#D9D9D9',
         },
       },
 
@@ -55,7 +64,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'presentation-image': "url('/img/image-1.png')",
+        contato: "url('/img/contato-bg.png')",
       },
     },
   },
