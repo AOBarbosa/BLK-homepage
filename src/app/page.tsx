@@ -286,12 +286,15 @@ export default function Home() {
       {/* RODAPE */}
       <div className="flex items-center w-full h-32 px-36 justify-between bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient">
         <div className="self-end">
-          <a href="">
+          <a href="/">
             <Image src={blkLogoBottom} alt="BLK Home" />
           </a>
         </div>
         <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end">
-          <a href="" className=" hover:text-blue-200">
+          <a
+            href="https://web.whatsapp.com/send?text=Testando%20integração%20com%20wpp&phone=+5584996760499" /* USANDO NUMERO DE KAROL */
+            className=" hover:text-blue-200"
+          >
             <WhatsappLogo size={56} />
           </a>
           <a href="" className=" hover:text-blue-200">
