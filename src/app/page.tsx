@@ -2,9 +2,11 @@
 
 import { ServicesCard } from '@/components/ServicesCard'
 
+import { Navbar } from 'flowbite-react'
+
 import Image from 'next/image'
-import blkPresentation from '@/assets/Hero.png'
-import blkLogo from '@/assets/logo-bottom.svg'
+import blkLogoHeader from '@/assets/logo-header.svg'
+import blkLogoBottom from '@/assets/logo-bottom.svg'
 import manWelding from '@/assets/image-2.png'
 import item1 from '@/assets/service-1.png'
 import item2 from '@/assets/service-2.png'
@@ -14,6 +16,7 @@ import item5 from '@/assets/service-5.png'
 
 import {
   EnvelopeSimple,
+  Gear,
   InstagramLogo,
   LinkedinLogo,
   Phone,
@@ -22,16 +25,16 @@ import {
 
 export default function Home() {
   return (
-    <div className="w-auto sm:w-mobile md:w-1440">
+    <div className="">
       {/* HEADER */}
-      <div className="flex items-center px-4 md:px-36 justify-center md:justify-between w-auto sm:w-1440 h-70 bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient sticky left-0 top-0 right-0 z-20">
-        <div className="sm:mb-24">
+      {/* <div className="flex items-center px-4 md:px-36 justify-center md:justify-between w-auto sm:w-1440 h-70 bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient sticky left-0 top-0 right-0 z-20">
+        <div className="mb-10 sm:mb-24">
           <a href="">
-            <Image src={blkLogo} alt="BLK Home" className="w-60" />
+            <Image src={blkLogoHeader} alt="BLK Home" className="w-60" />
           </a>
         </div>
 
-        <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end invisible md:visible">
+        <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end">
           <a href="" className=" hover:text-blue-200">
             Home
           </a>
@@ -45,14 +48,63 @@ export default function Home() {
             Contatos
           </a>
         </div>
-      </div>
+      </div> */}
 
-      <main className="flex flex-col items-center">
+      {/* HEADER */}
+      <Navbar
+        fluid={true}
+        rounded={true}
+        className="bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient fixed w-full h-70 z-20 top-0 left-0"
+      >
+        <Navbar.Brand href="/" className="flex gap-4  text-blue-850 ">
+          {/* <Image
+            src={blkLogoHeader}
+            alt="BLK Home"
+            className="self-center whitespace-nowrap text-3xl font-semibold"
+          /> */}
+
+          <Gear className="w-10 h-auto" />
+          <span className="font-sans self-center whitespace-nowrap text-4xl font-semibold">
+            BLK
+          </span>
+        </Navbar.Brand>
+
+        <Navbar.Toggle className="text-blue-850" />
+
+        <Navbar.Collapse className="bg-gray-50 md:bg-transparent rounded-lg text-center font-bold text-lg">
+          <Navbar.Link
+            href="/"
+            className="font-bold md:text-xl lg:text-2.5xl text-blue-850 hover:bg-blue-850 hover:text-gray-100 md:hover:text-gray-100"
+          >
+            Home
+          </Navbar.Link>
+          <Navbar.Link
+            href="#about"
+            className="font-bold md:text-xl lg:text-2.5xl text-blue-850 hover:bg-blue-850 hover:text-gray-100 md:hover:text-gray-100"
+          >
+            Quem Somos
+          </Navbar.Link>
+          <Navbar.Link
+            href="#services"
+            className="font-bold md:text-xl lg:text-2.5xl text-blue-850 hover:bg-blue-850 hover:text-gray-100 md:hover:text-gray-100"
+          >
+            Serviços
+          </Navbar.Link>
+          <Navbar.Link
+            href="#contacts"
+            className="font-bold md:text-xl lg:text-2.5xl text-blue-850 hover:bg-blue-850 hover:text-gray-100 md:hover:text-gray-100"
+          >
+            Contatos
+          </Navbar.Link>
+        </Navbar.Collapse>
+      </Navbar>
+
+      <main className="flex flex-col items-center mt-16">
         {/* PRESENTATION */}
-        <Image src={blkPresentation} alt="" />
+        <div className="bg-home bg-cover w-full h-52 sm:w-full sm:h-card lg:w-full lg:h-698" />
 
         {/* QUEM SOMOS */}
-        <div className="grid grid-cols-2 py-4 px-32 gap-4">
+        <div id="about" className="grid grid-cols-2 py-4 px-32 gap-4">
           <div className="w-96 h-80">
             <h1 className="mt-12 text-4xl underline underline-offset-8 mb-14 decoration-green-450">
               Quem Somos
@@ -73,7 +125,10 @@ export default function Home() {
         </div>
 
         {/* SERVICOS */}
-        <div className="flex flex-col items-center w-full h-services bg-gray-300">
+        <div
+          id="services"
+          className="flex flex-col items-center w-full h-services bg-gray-300"
+        >
           <h1 className="mt-12 text-4xl underline underline-offset-8 mb-14 decoration-green-450">
             Serviços
           </h1>
@@ -118,7 +173,10 @@ export default function Home() {
         </div>
 
         {/* CONTATOS */}
-        <div className="w-full h-contatos flex flex-col items-center bg-contato bg-no-repeat">
+        <div
+          id="contacts"
+          className="w-full h-contatos flex flex-col items-center bg-contato bg-no-repeat"
+        >
           <h1 className="mt-12 text-4xl text-gray-50 underline underline-offset-8 mb-14 decoration-green-450">
             Contatos
           </h1>
@@ -141,7 +199,8 @@ export default function Home() {
                   <span className="text-start font-sans italic text-base">
                     Nome
                   </span>
-                  <textarea
+                  <input
+                    type="text"
                     placeholder="Insira seu nome"
                     className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
                   />
@@ -151,7 +210,8 @@ export default function Home() {
                   <span className="text-start font-sans italic text-base">
                     Sobrenome
                   </span>
-                  <textarea
+                  <input
+                    type="text"
                     placeholder="Insira seu sobrenome"
                     className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
                   />
@@ -172,18 +232,20 @@ export default function Home() {
                   <span className="text-start font-sans italic text-base">
                     Telefone
                   </span>
-                  <textarea
+                  <input
+                    type="text"
                     placeholder="Insira seu telefone"
                     className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
                   />
                 </label>
 
                 <label className="flex flex-col gap-2">
-                  <span className="text-start font-sans italic text-base">
+                  <span className="font-sans italic text-base">
                     Deixe-nos uma mensagem
                   </span>
                   <textarea
                     placeholder="Insira uma mensagem"
+                    rows={4}
                     className="block resize-none w-full h-44 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
                   />
                 </label>
@@ -198,7 +260,7 @@ export default function Home() {
             </div>
 
             {/* INFO CONTATO */}
-            <div className="w-72 h-36 flex flex-col bg-gradient-to-b from-green-350 rounded gap-4">
+            <div className="w-72 h-36 flex flex-col bg-green-350 opacity-70 rounded gap-4">
               <h1 className="text-center text-xl">Informações para contato</h1>
               <div className="flex flex-col gap-2">
                 <p className="flex gap-2">
@@ -225,7 +287,7 @@ export default function Home() {
       <div className="flex items-center w-full h-32 px-36 justify-between bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient">
         <div className="self-end">
           <a href="">
-            <Image src={blkLogo} alt="BLK Home" />
+            <Image src={blkLogoBottom} alt="BLK Home" />
           </a>
         </div>
         <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end">
