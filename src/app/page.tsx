@@ -101,7 +101,9 @@ export default function Home() {
 
       <main className="flex flex-col items-center mt-16">
         {/* PRESENTATION */}
-        <div className="bg-home bg-cover w-full h-52 sm:w-full sm:h-96 lg:w-full lg:h-698" />
+        <div className="bg-home bg-cover w-full h-52 sm:w-full sm:h-96 lg:w-full lg:h-698">
+          <h1 className="text-red-500">Testandos</h1>
+        </div>
 
         {/* QUEM SOMOS */}
         <div id="about" className="grid grid-cols-2 py-4 px-32 gap-4">
