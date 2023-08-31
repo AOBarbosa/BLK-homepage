@@ -66,7 +66,7 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         contato: "url('/img/contato-bg.png')",
-        home: "url('/img/Hero.png')",
+        home: "url('/img/presentation-bg.png')",
       },
     },
   },

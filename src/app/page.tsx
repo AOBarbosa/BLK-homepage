@@ -5,8 +5,8 @@ import { ServicesCard } from '@/components/ServicesCard'
 import { Navbar } from 'flowbite-react'
 
 import Image from 'next/image'
-import blkLogoHeader from '@/assets/logo-header.svg'
-import blkLogoBottom from '@/assets/logo-bottom.svg'
+import blkLogo from '@/assets/blkLogo.png'
+import presentationText from '@/assets/presentation-text.png'
 import manWelding from '@/assets/image-2.png'
 import item1 from '@/assets/service-1.png'
 import item2 from '@/assets/service-2.png'
@@ -16,7 +16,6 @@ import item5 from '@/assets/service-5.png'
 
 import {
   EnvelopeSimple,
-  Gear,
   InstagramLogo,
   LinkedinLogo,
   Phone,
@@ -25,31 +24,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="">
-      {/* HEADER */}
-      {/* <div className="flex items-center px-4 md:px-36 justify-center md:justify-between w-auto sm:w-1440 h-70 bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient sticky left-0 top-0 right-0 z-20">
-        <div className="mb-10 sm:mb-24">
-          <a href="">
-            <Image src={blkLogoHeader} alt="BLK Home" className="w-60" />
-          </a>
-        </div>
-
-        <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end">
-          <a href="" className=" hover:text-blue-200">
-            Home
-          </a>
-          <a href="" className=" hover:text-blue-200">
-            Quem Somos
-          </a>
-          <a href="" className=" hover:text-blue-200">
-            Serviços
-          </a>
-          <a href="" className=" hover:text-blue-200">
-            Contatos
-          </a>
-        </div>
-      </div> */}
-
+    <div>
       {/* HEADER */}
       <Navbar
         fluid={true}
@@ -57,16 +32,7 @@ export default function Home() {
         className="bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient fixed w-full h-70 z-20 top-0 left-0"
       >
         <Navbar.Brand href="/" className="flex gap-4  text-blue-850 ">
-          {/* <Image
-            src={blkLogoHeader}
-            alt="BLK Home"
-            className="self-center whitespace-nowrap text-3xl font-semibold"
-          /> */}
-
-          <Gear className="w-10 h-auto" />
-          <span className="font-sans self-center whitespace-nowrap text-4xl font-semibold">
-            BLK
-          </span>
+          <Image src={blkLogo} alt="BLK Home" className="w-40 h-auto" />
         </Navbar.Brand>
 
         <Navbar.Toggle className="text-blue-850" />
@@ -101,8 +67,17 @@ export default function Home() {
 
       <main className="flex flex-col items-center mt-16">
         {/* PRESENTATION */}
-        <div className="bg-home bg-cover w-full h-52 sm:w-full sm:h-96 lg:w-full lg:h-698">
-          <h1 className="text-red-500">Testandos</h1>
+        <div className="bg-home bg-cover w-full h-52 sm:w-full sm:h-96 lg:w-full lg:h-698 flex items-center justify-end">
+          {/* <h1 className="w-40 lg:w-presentation text-gray-50 font-sans font-normal lg:text-4xl text-center lg:mr-8 lg:mb-28">
+            A BLK é a escolha certa para quem procura serviços de fabricação de
+            peças de alta qualidade.
+          </h1> */}
+
+          <Image
+            src={presentationText}
+            alt="Presentation text"
+            className="w-36 sm:w-60 md:w-72 lg:w-presentation lg:mr-8 lg:mb-28"
+          />
         </div>
 
         {/* QUEM SOMOS */}
@@ -289,7 +264,7 @@ export default function Home() {
       <div className="flex items-center w-full h-32 px-36 justify-between bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient">
         <div className="self-end">
           <a href="/">
-            <Image src={blkLogoBottom} alt="BLK Home" />
+            <Image src={blkLogo} alt="BLK Home" />
           </a>
         </div>
         <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end">
