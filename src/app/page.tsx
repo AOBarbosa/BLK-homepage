@@ -111,13 +111,13 @@ export default function Home() {
         {/* SERVICOS */}
         <div
           id="services"
-          className="flex flex-col items-center w-full h-services bg-gray-300"
+          className="flex flex-col items-center w-full h-auto bg-gray-300"
         >
-          <h1 className="mt-12 text-4xl underline underline-offset-8 mb-14 decoration-green-450">
+          <h1 className="mt-3 text-center md:mt-6 lg:mt-12 text-xl md:text-2.5xl lg:text-4xl underline underline-offset-8 mb-4 md:mb-7 lg:mb-14 decoration-green-450">
             Serviços
           </h1>
 
-          <div className="grid grid-cols-3 px-48 gap-32">
+          <div className="grid grid-cols-1 place-items-center md:grid-cols-2 xl:grid-cols-3 lg:px-48 gap-8 md:gap-16 mb-8">
             <ServicesCard
               icon={item1}
               title="Fabricação por Usinagem"
@@ -140,9 +140,7 @@ export default function Home() {
               description="Torção e vira em arames ou chapas para atingir a forma e medida solicitada."
               materials="SAE 1080 – DIN 17223 C, SAE 1070 – DIN 17223 B, SAE 5160 / 6150 / 9254, AISI – 302 / 304 / 316 / 316 L / 410 / 420, INCONEL, MONEL, HASTELOY, BRONZE, etc."
             />
-          </div>
 
-          <div className="grid grid-cols-2 mt-16 px-48 gap-32">
             <ServicesCard
               icon={item4}
               title="Venda de Materiais de Fixação e Auxiliares"

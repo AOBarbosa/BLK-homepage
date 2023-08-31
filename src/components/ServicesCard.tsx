@@ -14,7 +14,7 @@ export function ServicesCard({
   materials,
 }: CardProps) {
   return (
-    <div className="flex flex-col w-80 h-card gap-2 items-center text-center bg-gray-100 rounded hover:outline-offset-8 hover:outline hover:outline-blue-850">
+    <div className="flex flex-col w-60 sm:w-80 h-card gap-2 items-center text-center bg-gray-100 rounded hover:outline-offset-8 hover:outline hover:outline-blue-850">
       <Image src={icon} alt="" className="rounded w-full" height={200} />
 
       <h1 className="text-xl">{title}</h1>

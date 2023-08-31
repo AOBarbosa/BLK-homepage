@@ -22,7 +22,7 @@ const config: Config = {
       height: {
         '698': '43.625rem',
         '70': '4.375rem',
-        services: '76rem',
+        services: '80rem',
         card: '30rem',
         presentation: '7.8125rem',
         contatos: '60.63425rem',
