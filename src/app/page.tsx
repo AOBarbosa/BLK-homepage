@@ -157,13 +157,13 @@ export default function Home() {
         {/* CONTATOS */}
         <div
           id="contacts"
-          className="w-full h-contatos flex flex-col items-center bg-contato bg-no-repeat"
+          className="bg-contato bg-cover object-left w-full h-contatos flex flex-col items-center"
         >
-          <h1 className="mt-12 text-4xl text-gray-50 underline underline-offset-8 mb-14 decoration-green-450">
+          <h1 className="mt-3 text-center md:mt-6 lg:mt-12 text-xl md:text-2.5xl lg:text-4xl underline underline-offset-8 mb-4 md:mb-7 lg:mb-14 decoration-green-450">
             Contatos
           </h1>
 
-          <div className="grid grid-cols-2 gap-contatos px-48">
+          <div className="grid grid-cols-1 md:grid md:grid-cols-2 lg:flex lg:flex-row lg:justify-evenly gap-4 lg:gap-96 py-4 px-16 ">
             {/* FORMULARIO */}
             <div className="w-card h-info flex flex-col px-2 gap-4 bg-gradient-to-b from-green-350 rounded">
               <h1 className="text-center font-sans text-lg">
