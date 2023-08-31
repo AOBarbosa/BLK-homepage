@@ -15,6 +15,8 @@ const config: Config = {
         'home-text': '2.125rem',
         card: '16.875rem',
         presentation: '37.5625rem',
+        'quem-somos-md': '38rem',
+        'quem-somos-lg': '48rem',
       },
 
       height: {
@@ -25,6 +27,7 @@ const config: Config = {
         presentation: '7.8125rem',
         contatos: '60.63425rem',
         info: '45rem',
+        'quem-somos-lg': '45rem',
       },
 
       gap: {

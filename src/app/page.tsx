@@ -7,7 +7,7 @@ import { Navbar } from 'flowbite-react'
 import Image from 'next/image'
 import blkLogo from '@/assets/blkLogo.png'
 import presentationText from '@/assets/presentation-text.png'
-import manWelding from '@/assets/image-2.png'
+import manWelding from '@/assets/man-working.png'
 import item1 from '@/assets/service-1.png'
 import item2 from '@/assets/service-2.png'
 import item3 from '@/assets/service-3.png'
@@ -67,7 +67,7 @@ export default function Home() {
 
       <main className="flex flex-col items-center mt-16">
         {/* PRESENTATION */}
-        <div className="bg-home bg-cover w-full h-52 sm:w-full sm:h-96 lg:w-full lg:h-698 flex items-center justify-end">
+        <div className="bg-home bg-cover w-full h-52 sm:h-96 lg:h-698 flex items-center justify-end">
           {/* <h1 className="w-40 lg:w-presentation text-gray-50 font-sans font-normal lg:text-4xl text-center lg:mr-8 lg:mb-28">
             A BLK é a escolha certa para quem procura serviços de fabricação de
             peças de alta qualidade.
@@ -81,12 +81,15 @@ export default function Home() {
         </div>
 
         {/* QUEM SOMOS */}
-        <div id="about" className="grid grid-cols-2 py-4 px-32 gap-4">
-          <div className="w-96 h-80">
-            <h1 className="mt-12 text-4xl underline underline-offset-8 mb-14 decoration-green-450">
+        <div
+          id="about"
+          className="grid grid-cols-1 lg:flex lg:flex-row lg:justify-evenly gap-4 lg:gap-16 2xl:gap-64 py-4 px-16 "
+        >
+          <div className="w-full lg:w-96 h-full">
+            <h1 className="mt-3 text-center md:mt-6 lg:mt-12 text-xl md:text-2.5xl lg:text-4xl underline underline-offset-8 mb-4 md:mb-7 lg:mb-14 decoration-green-450">
               Quem Somos
             </h1>
-            <p className="text-xl">
+            <p className="text-xs sm:text-base md:text-lg xl:text-xl text-justify">
               A BLK é especializada em fabricação de peças com alta precisão em
               diversos tipos de materiais, incluindo metais ferrosos, não
               ferrosos e polímeros. A empresa, apesar de nova, possui uma equipe
@@ -98,7 +101,11 @@ export default function Home() {
             </p>
           </div>
 
-          <Image src={manWelding} alt="" className="rounded" />
+          <Image
+            src={manWelding}
+            alt=""
+            className="rounded w-full lg:w-quem-somos-lg"
+          />
         </div>
 
         {/* SERVICOS */}
