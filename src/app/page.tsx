@@ -266,24 +266,34 @@ export default function Home() {
       </main>
 
       {/* RODAPE */}
-      <div className="flex items-center w-full h-32 px-36 justify-between bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient">
-        <div className="self-end">
+      <div className="flex items-center w-full h-24 px-10 md:px-24 lg:px-36 justify-between bg-gradient-to-r from-blue-left-gradient to-blue-right-gradient">
+        <div className="self-end mb-6 md:mb-4">
           <a href="/">
-            <Image src={blkLogo} alt="BLK Home" />
+            <Image
+              src={blkLogo}
+              alt="BLK Home"
+              className="w-32 md:w-40 h-auto"
+            />
           </a>
         </div>
-        <div className="flex flex-row gap-8 font-sans font-bold text-2.5xl text-blue-850 p-2 justify-end">
+        <div className="flex flex-row gap-1 sm:gap-4 md:gap-8 font-sans font-bold text-blue-850 p-2 justify-end">
           <a
             href="https://web.whatsapp.com/send?text=Testando%20integração%20com%20wpp&phone=+5584996760499" /* USANDO NUMERO DE KAROL */
-            className=" hover:text-blue-200"
+            className=" hover:text-blue-200 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            <WhatsappLogo size={56} />
+            <WhatsappLogo />
           </a>
-          <a href="" className=" hover:text-blue-200">
-            <InstagramLogo size={56} />
+          <a
+            href=""
+            className=" hover:text-blue-200 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+          >
+            <InstagramLogo />
           </a>
-          <a href="" className=" hover:text-blue-200">
-            <LinkedinLogo size={56} />
+          <a
+            href=""
+            className=" hover:text-blue-200 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+          >
+            <LinkedinLogo />
           </a>
         </div>
       </div>
