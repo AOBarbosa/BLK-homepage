@@ -255,7 +255,10 @@ export default function Home() {
                   (84) 9 9908-9824
                 </p>
 
-                <a className="flex gap-2 cursor-pointer underline decoration-transparent hover:text-gray-100 hover:underline-offset-4 hover:decoration-white">
+                <a
+                  href="https://web.whatsapp.com/send?text=Testando%20integração%20com%20wpp&phone=+5584996760499" /* USANDO NUMERO DE KAROL */
+                  className="flex gap-2 cursor-pointer underline decoration-transparent hover:text-gray-100 hover:underline-offset-4 hover:decoration-white"
+                >
                   <WhatsappLogo size={24} />
                   (84) 9 9908-9824
                 </a>
