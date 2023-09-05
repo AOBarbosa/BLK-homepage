@@ -242,7 +242,7 @@ export default function Home() {
             </div>
 
             {/* INFO CONTATO */}
-            <div className="w-72 h-36 flex flex-col bg-green-350 opacity-70 rounded gap-4">
+            <div className="w-72 h-36 flex flex-col bg-green-350 opacity-70 rounded gap-4 px-2">
               <h1 className="text-center text-xl">Informações para contato</h1>
               <div className="flex flex-col gap-2">
                 <p className="flex gap-2">
@@ -256,8 +256,8 @@ export default function Home() {
                 </p>
 
                 <a
-                  href="https://web.whatsapp.com/send?text=Testando%20integração%20com%20wpp&phone=+5584996760499" /* USANDO NUMERO DE KAROL */
-                  className="flex gap-2 cursor-pointer underline decoration-transparent hover:text-gray-100 hover:underline-offset-4 hover:decoration-white"
+                  href="https://wa.me/5584999089824"
+                  className="flex gap-2 cursor-pointer underline decoration-transparent hover:text-gray-50 hover:underline-offset-4 hover:decoration-white"
                 >
                   <WhatsappLogo size={24} />
                   (84) 9 9908-9824
@@ -281,7 +281,7 @@ export default function Home() {
         </div>
         <div className="flex flex-row gap-1 sm:gap-4 md:gap-8 font-sans font-bold text-blue-850 p-2 justify-end">
           <a
-            href="https://web.whatsapp.com/send?text=Testando%20integração%20com%20wpp&phone=+5584996760499" /* USANDO NUMERO DE KAROL */
+            href="https://wa.me/5584999089824"
             className=" hover:text-blue-200 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
             <WhatsappLogo />
