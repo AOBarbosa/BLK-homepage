@@ -77,7 +77,7 @@ export default function Home() {
           <Image
             src={presentationText}
             alt="Presentation text"
-            className="w-36 sm:w-60 md:w-72 lg:w-presentation lg:mr-8 lg:mb-28"
+            className="w-48 sm:w-60 md:w-72 lg:w-presentation lg:mr-8 lg:mb-28"
           />
         </div>
 

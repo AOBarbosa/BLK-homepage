@@ -28,6 +28,7 @@ const config: Config = {
         contatos: '60.63425rem',
         info: '45rem',
         'quem-somos-lg': '45rem',
+        medium: '32rem',
       },
 
       gap: {
