@@ -21,6 +21,7 @@ import {
   Phone,
   WhatsappLogo,
 } from 'phosphor-react'
+import { EmailForm } from '@/components/EmailForm'
 
 export default function Home() {
   return (
@@ -165,81 +166,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid md:grid-cols-2 lg:flex lg:flex-row lg:justify-evenly gap-4 lg:gap-96 py-4 px-16 ">
             {/* FORMULARIO */}
-            <div className="w-card h-info flex flex-col px-2 gap-4 bg-gradient-to-b from-green-350 rounded">
-              <h1 className="text-center font-sans text-lg">
-                Mais Informações
-              </h1>
-
-              <p className="text-base">
-                Para qualquer informação, dúvida ou comentário, por favor ligue
-                ou mande uma mensagem via whatsapp para o número: (84) 9
-                9908-9824. Ou preencha o fomulário:
-              </p>
-
-              <form className="flex flex-col gap-2">
-                <label className="flex flex-col gap-2">
-                  <span className="text-start font-sans italic text-base">
-                    Nome
-                  </span>
-                  <input
-                    type="text"
-                    placeholder="Insira seu nome"
-                    className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
-                  />
-                </label>
-
-                <label className="flex flex-col gap-2">
-                  <span className="text-start font-sans italic text-base">
-                    Sobrenome
-                  </span>
-                  <input
-                    type="text"
-                    placeholder="Insira seu sobrenome"
-                    className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
-                  />
-                </label>
-
-                <label className="flex flex-col gap-2">
-                  <span className="text-start font-sans italic text-base">
-                    E-mail
-                  </span>
-                  <input
-                    type="email"
-                    placeholder="Insira seu e-mail"
-                    className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 peer focus:outline-none focus:border-sky-500"
-                  />
-                </label>
-
-                <label className="flex flex-col gap-2">
-                  <span className="text-start font-sans italic text-base">
-                    Telefone
-                  </span>
-                  <input
-                    type="text"
-                    placeholder="Insira seu telefone"
-                    className="block resize-none w-full h-7 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
-                  />
-                </label>
-
-                <label className="flex flex-col gap-2">
-                  <span className="font-sans italic text-base">
-                    Deixe-nos uma mensagem
-                  </span>
-                  <textarea
-                    placeholder="Insira uma mensagem"
-                    rows={4}
-                    className="block resize-none w-full h-44 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
-                  />
-                </label>
-
-                <button
-                  type="submit"
-                  className="bg-green-info w-32 self-center rounded hover:bg-gray-400 hover:text-gray-100"
-                >
-                  Enviar
-                </button>
-              </form>
-            </div>
+            <EmailForm />
 
             {/* INFO CONTATO */}
             <div className="w-72 h-36 flex flex-col bg-green-350 opacity-70 rounded gap-4 px-2">

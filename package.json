@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@hookform/resolvers": "^3.3.1",
     "@phosphor-icons/react": "github:phosphor-icons/react",
     "@rocketseat/eslint-config": "^2.1.0",
     "@types/node": "20.4.10",
@@ -24,7 +26,9 @@
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.46.1",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "zod": "^3.22.2"
   }
 }
