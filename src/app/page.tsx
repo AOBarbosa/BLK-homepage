@@ -160,7 +160,7 @@ export default function Home() {
           id="contacts"
           className="bg-contato bg-cover object-left w-full h-contatos flex flex-col items-center"
         >
-          <h1 className="mt-3 text-center md:mt-6 lg:mt-12 text-xl md:text-2.5xl lg:text-4xl underline underline-offset-8 mb-4 md:mb-7 lg:mb-14 decoration-green-450">
+          <h1 className="mt-3 text-center text-gray-50 md:mt-6 lg:mt-12 text-xl md:text-2.5xl lg:text-4xl underline underline-offset-8 mb-4 md:mb-7 lg:mb-14 decoration-green-450">
             Contatos
           </h1>
 
@@ -214,17 +214,17 @@ export default function Home() {
             <WhatsappLogo />
           </a>
           <a
-            href=""
+            href="https://www.instagram.com/blkservicosecomercio/"
             className=" hover:text-blue-200 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
             <InstagramLogo />
           </a>
-          <a
+          {/* <a
             href=""
             className=" hover:text-blue-200 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
             <LinkedinLogo />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

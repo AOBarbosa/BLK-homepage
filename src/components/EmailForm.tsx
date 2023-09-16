@@ -6,6 +6,7 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import emailjs from '@emailjs/browser'
+import { CheckCircle } from 'phosphor-react'
 
 const sendEmailFormSchema = z.object({
   firstName: z.string().nonempty('Campo obrigatório'),
@@ -36,20 +37,29 @@ export function EmailForm() {
   const [email, setEmail] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [message, setMessage] = useState('')
+  const [emailSentStatus, setEmailSentStatus] = useState(false)
+
+  function changeEmailStatusToFalse() {
+    setTimeout(() => {
+      setEmailSentStatus(false)
+    }, 5000) // 5000 milissegundos = 5 segundos
+  }
 
   function handleSendEmail(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
     emailjs
       .sendForm(
-        'service_gqb6qdn',
-        'template_d1ybjn8',
+        'service_jc9lo1g',
+        'template_tg8py8d',
         event.currentTarget,
-        '0N6q_1dhAyJ54gq2u',
+        'GcfWmrlcF3yNXwaJe',
       )
       .then(
         (result) => {
           console.log(result.text)
+          setEmailSentStatus(true)
+          changeEmailStatusToFalse()
         },
         (error) => {
           console.log(error.text)
@@ -172,19 +182,28 @@ export function EmailForm() {
             placeholder="Insira uma mensagem"
             className="block resize-none w-full h-44 rounded bg-green-info border border-green-info text-black px-2 focus:outline-none focus:border-sky-500"
           />
-          {/* {errors.message && (
+          {errors.message && (
             <span className="text-red-500 text-xs">
               {errors.message.message}
             </span>
-          )} */}
+          )}
         </div>
 
-        <button
-          type="submit"
-          className="bg-green-info w-32 hover:pointer self-center rounded hover:bg-gray-400 hover:text-gray-100"
-        >
-          Enviar
-        </button>
+        {emailSentStatus ? (
+          <button
+            type="submit"
+            className="bg-green-500 text-gray-50 cursor-not-allowed w-32 h-full flex justify-center hover:pointer self-center rounded"
+          >
+            <CheckCircle size={32} />
+          </button>
+        ) : (
+          <button
+            type="submit"
+            className="bg-green-info w-32 hover:pointer self-center rounded hover:bg-gray-400 hover:text-gray-100"
+          >
+            Enviar
+          </button>
+        )}
       </form>
     </div>
   )
