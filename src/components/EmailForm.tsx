@@ -45,6 +45,14 @@ export function EmailForm() {
     }, 5000) // 5000 milissegundos = 5 segundos
   }
 
+  function cleanInputAreas() {
+    setFirstName('')
+    setLastName('')
+    setEmail('')
+    setPhoneNumber('')
+    setMessage('')
+  }
+
   function handleSendEmail(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
@@ -56,8 +64,8 @@ export function EmailForm() {
         'GcfWmrlcF3yNXwaJe',
       )
       .then(
-        (result) => {
-          console.log(result.text)
+        () => {
+          cleanInputAreas()
           setEmailSentStatus(true)
           changeEmailStatusToFalse()
         },
@@ -65,12 +73,6 @@ export function EmailForm() {
           console.log(error.text)
         },
       )
-
-    setFirstName('')
-    setLastName('')
-    setEmail('')
-    setPhoneNumber('')
-    setMessage('')
   }
 
   return (
