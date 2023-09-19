@@ -13,11 +13,12 @@ import item2 from '@/assets/service-2.png'
 import item3 from '@/assets/service-3.png'
 import item4 from '@/assets/service-4.png'
 import item5 from '@/assets/service-5.png'
+import item6 from '@/assets/service-6.png'
+import item7 from '@/assets/service-7.png'
 
 import {
   EnvelopeSimple,
   InstagramLogo,
-  LinkedinLogo,
   Phone,
   WhatsappLogo,
 } from 'phosphor-react'
@@ -129,12 +130,14 @@ export default function Home() {
           Polipropileno, Polietileno, Poliuretano, UHMW, Nylon, PVC, PEEK, PVDF,
           Celeron, Fenolite, etc."
             />
+
             <ServicesCard
               icon={item2}
               title="Fabricação em Chaparia"
               description="Corte de chapas no plasma ou laser, vira de chapas e soldagem para atingir a forma e medida solicitada."
               materials="SAE 1020, Inox 304L, Cobre, Bronze, etc"
             />
+
             <ServicesCard
               icon={item3}
               title="Fabricação de Molas"
@@ -147,10 +150,23 @@ export default function Home() {
               title="Venda de Materiais de Fixação e Auxiliares"
               description="Produtos que auxiliam em montagem e fixações, seja para transporte de cargas ou sutentação."
             />
+
             <ServicesCard
               icon={item5}
               title="Desenho Técnico"
               description="Aferição de medidas e projeção de vistas 2D e 3D para auxílio de produção de peças."
+            />
+
+            <ServicesCard
+              icon={item6}
+              title="Serviço de Solda"
+              description="Oferecemos serviços de modelagem e impressão 3D utilizando os materiais ABS e PLA, materializamos esses modelos com alta precisão e qualidade."
+            />
+
+            <ServicesCard
+              icon={item7}
+              title="Impressão 3D"
+              description="Oferecemos serviços de solda de qualidade. Trabalhamos com aço, ferro, inox, solda plástica e serviços metalúrgicos em geral."
             />
           </div>
         </div>
