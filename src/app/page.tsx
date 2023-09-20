@@ -158,15 +158,15 @@ export default function Home() {
             />
 
             <ServicesCard
-              icon={item7}
-              title="Serviço de Solda"
-              description="Oferecemos serviços de solda de qualidade. Trabalhamos com aço, ferro, inox, solda plástica e serviços metalúrgicos em geral."
-            />
-
-            <ServicesCard
               icon={item6}
               title="Impressão 3D"
               description="Oferecemos serviços de modelagem e impressão 3D utilizando os materiais ABS e PLA, materializamos esses modelos com alta precisão e qualidade."
+            />
+
+            <ServicesCard
+              icon={item7}
+              title="Serviço de Solda"
+              description="Oferecemos serviços de solda de qualidade. Trabalhamos com aço, ferro, inox, solda plástica e serviços metalúrgicos em geral."
             />
           </div>
         </div>
